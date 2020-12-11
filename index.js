@@ -245,19 +245,16 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-  /*let newArr = [];
-  let numbers = [];
-for (let i = 0; i < array.length; i++) {
-  if (array[i].includes(years) {
-    numbers.push(years.splice);
-  }
-    else if (numbers[1] == 9) {
-      return array[i].name;
+  let newArray = [];
+  
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].years.split(" "[1]) === "9") {
+      newArray.push(array[i].name);
     }
   }
-    return newArr;*/
+  return newArray;
 }
-
+get20s(artists);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
@@ -269,8 +266,10 @@ for (let i = 0; i < array.length; i++) {
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, index){
-  return array.splice(index, 1);
+  array.splice(index, 1);
+  return array.length;
 }
+
 removeArtist(artists, 0);  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -290,15 +289,15 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array){
-    let obj = { 
+    array.push({ 
       id: 20,
-      name: "Your Name Here", 
-      years: "Your Birth Year - current day",
+      name: "Tuan", 
+      years: "1989 - current day",
       genre: "Web Design", 
-      nationality: "Your Nationality Here",
-      bio: "Add 1-2 sentences (or use lorem ipsum)",
-    };
-    return (array.push(obj));
+      nationality: "American",
+      bio: "Full-time web developer student",
+    });
+    return array;
   }
 
   addArtist(artists);

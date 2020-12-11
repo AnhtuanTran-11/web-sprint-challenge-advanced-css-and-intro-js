@@ -107,6 +107,7 @@ nav span{
     align-items: center;
     height:60vh;
     margin:5% 0;
+    background-size: cover;
 }	
 .title-container div:hover {	
     opacity: 80%;	

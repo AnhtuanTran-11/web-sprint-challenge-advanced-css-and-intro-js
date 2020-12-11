@@ -247,13 +247,15 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i].name === "Salvador Dali" || array[i].name === "Frida Kahlo") {
+    const splitter = (array[i].years.split(" - "))
+    if (Number(splitter[0]) >= 1900 && (Number(splitter[1] <= 2000))) {
       newArray.push(array[i].name)
     }
   }
+  console.log(newArray);
   return newArray;
 }
-get20s(artists);
+console.log(get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
